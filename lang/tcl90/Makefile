@@ -55,8 +55,8 @@ CONFIGURE_ARGS=	--enable-shared \
 LDFLAGS+=	-Wl,-z,muldefs
 
 TCL_VERSION=	9.0.0
-TCL_VER=	9.0
-TCL_RC=		rc0
+TCL_VER=	${TCL_VERSION:R}
+TCL_RC=		rc2
 SHORT_TCL_VER=	${TCL_VER:S/.//}
 MAN_SUFFIX=	${PKGBASE}
 
@@ -86,6 +86,12 @@ PLIST_SUB+=	DTRACE="@comment "
 .endif
 
 post-patch:
+	${REINPLACE_CMD} -e \
+	    's|@TCL_BUILD_LIB_SPEC@|@TCL_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_SPEC@|@TCL_STUB_LIB_SPEC@|; \
+	     s|@TCL_BUILD_STUB_LIB_PATH@|@TCL_STUB_LIB_PATH@|; \
+	     s|@TCL_SRC_DIR@|${PREFIX}/include/tcl${TCL_VER}|' \
+	     ${PATCH_WRKSRC}/unix/tclConfig.sh.in
 	${REINPLACE_CMD} \
 		-e 's|libtclstub.a|libtclstub${TCL_VER}.a|' \
 		-e 's|-ltclstub|-ltclstub${TCL_VER}|' \
