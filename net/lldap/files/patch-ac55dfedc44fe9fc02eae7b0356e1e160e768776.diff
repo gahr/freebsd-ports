@@ -1,0 +1,13 @@
+diff --git a/app/src/components/login.rs b/app/src/components/login.rs
+index de8d1b0d..8caa7e59 100644
+--- app/src/components/login.rs.orig
++++ app/src/components/login.rs
+@@ -27,7 +27,7 @@ pub struct LoginForm {
+ pub struct FormModel {
+     #[validate(length(min = 1, message = "Missing username"))]
+     username: String,
+-    #[validate(length(min = 8, message = "Invalid password. Min length: 8"))]
++    #[validate(length(min = 1, message = "Missing password"))]
+     password: String,
+ }
+ 
