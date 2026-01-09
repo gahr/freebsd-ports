@@ -3,6 +3,7 @@ PORTVERSION=	7.6.0
 DISTVERSIONSUFFIX=	p1
 PORTEPOCH=	1
 CATEGORIES=	mail
+PORTREVISION=	1
 MASTER_SITES=	https://www.opensmtpd.org/archives/
 
 MAINTAINER=	fluffy@FreeBSD.org
