@@ -5767,3 +5767,5 @@ misc/py-kartograph||2026-10-25|Removed: Contains python2 code, no users and no u
 www/mod_tls||2026-10-27|Removed: No longer maintained, removed from Apache httpd 2025-01-23
 net-im/convey||2026-10-27|Has expired: Obsolete and no longer developed since 2003
 databases/immudb||2026-10-27|Has expired: Not actively maintained. Multiple versions behind on upstream. Please take maintainership if you use this
+lang/tcl90|lang/tcl|2026-09-29|Tcl 9.x will be provided as a single port
+x11-toolkits/tk90|x11-toolkits/tk|2026-09-29|Tk 9.x will be provided as single port

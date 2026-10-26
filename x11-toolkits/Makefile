@@ -260,7 +260,7 @@
     SUBDIR += tix
     SUBDIR += tk-wrapper
     SUBDIR += tk86
-    SUBDIR += tk90
+    SUBDIR += tk
     SUBDIR += tkdnd
     SUBDIR += tkshape
     SUBDIR += tktable
